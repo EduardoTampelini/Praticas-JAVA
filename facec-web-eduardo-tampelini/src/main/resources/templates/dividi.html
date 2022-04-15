@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="header :: head">
+<meta charset="ISO-8859-1">
+<title>Prova tampelini</title>
+</head>
+<body>
+
+<h1 style="text-align:center" >
+  <span th:text="${mensagem}"></span>
+  </h1>
+  <form action="dividir" method="post">
+  <label>Primeiro Valor</label> 
+  <input type="number" min="0" value="0" step="0.01" class="form-control"
+          id="vlr1" name="vlr1" th:value="${calculo.vlr1}">
+			<br />
+			<label>Segundo Valor</label>
+			 <input type="number" min="0" value="0" step="0.01" class="form-control"
+          id="vlr2" name="vlr2" th:value="${calculo.vlr2}">
+			<br />
+			
+			<div style="text-align:center">
+			<button type="submit" class="btn btn-primary">Calcular</button>
+			</div>
+  </form>
+</body>
+</html>

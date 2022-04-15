@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="header :: head">
+<meta charset="ISO-8859-1">
+<title>Prova Tampelini</title>
+</head>
+<body>
+  <h1 style="text-align:center" >
+  <span th:text="${mensagem}"></span>
+   </h1>
+   
+   <p style="text-align:center"><strong>Escolha uma operacao matematica abaixo</strong></p>
+   <div style="display: flex; justify-content: center;">
+    <a href="/soma"><button class="btn btn-outline-danger btn-lg">Soma</button></a>
+    </div>
+    </br>
+    <div style="display: flex; justify-content: center;">
+    <a href="/subtrai"><button class="btn btn-outline-warning btn-lg">Subtrair</button></a>
+     </div>
+    </br>
+    <div style="display: flex; justify-content: center;">
+    <a href="/multiplica"><button class="btn btn-outline-success btn-lg">Multiplica</button></a>
+     </div>
+    </br>
+    <div style="display: flex; justify-content: center;">
+    <a href="/dividi"><button class="btn btn-outline-dark btn-lg">Dividi</button></a>
+    </div>
+    </br>
+   
+</body>
+</html>

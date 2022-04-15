@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Formulario</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+<div class="container">
+		<h1 style="text-align: center">
+			<span th:text="${mensagem}"></span>
+		</h1>
+		<br />
+		 
+		<div style="display: flex; justify-content: center;">
+		<a href="/" ><button class="btn btn-warning">Voltar</button></a>
+	    </div>
+		<form action="salvar" method="post">
+		  <label>Modelo</label> <input id="modelo" name="modelo"
+				type="text" class="form-control form-control-lg"
+				placeholder="Insira o modelo" aria-label=".form-control-lg example" th:value="${veiculo.modelo}">
+			<br />
+			<label>Fabricante</label> <input id="fabricante" name="fabricante"
+				type="text" class="form-control form-control-lg"
+				placeholder="Insira o fabricante" aria-label=".form-control-lg example" th:value="${veiculo.fabricante}">
+			<br />
+			<label>Ano Fabricacao</label> <input id="anoFabricacao" name="anoFabricacao"
+				type="text" class="form-control form-control-lg"
+				placeholder="Insira o Ano Fabricacao" aria-label=".form-control-lg example" th:value="${veiculo.anoFabricacao}">
+			<br />
+			<label>Ano Modelo</label> <input id="anoModelo" name="anoModelo"
+				type="text" class="form-control form-control-lg"
+				placeholder="Insira o Ano Modelo" aria-label=".form-control-lg example" th:value="${veiculo.anoModelo}">
+			
+			<input type="hidden" id="id" name="id" th:value="${veiculo.id}" th:if="${veiculo !=null}"/>
+			<br />
+			
+			<div style="display: flex; justify-content: center;">
+			<button type="submit" class="btn btn-warning">Salvar</button>
+			</div>
+			
+		</form>
+		<br />
+		</div>
+</body>
+</html>
